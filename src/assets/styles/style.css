@@ -1,0 +1,123 @@
+.active p {
+    color: #2B3674 !important;
+}
+
+.active svg path {
+    fill: #2B3674;
+}
+
+:root {
+    --text-color: #2B3674;
+}
+
+* {
+    color: var(--text-color);
+}
+
+.custome-dropdown .p-inputtext {
+    font-family: unset;
+    font-feature-settings: unset;
+    font-size: unset;
+    color: unset;
+    background: unset;
+    padding: unset;
+    border: unset;
+    transition: unset;
+    appearance: unset;
+    border-radius: unset;
+    outline-color: unset;
+}
+
+.custome-dropdown .p-dropdown {
+    background: unset;
+    border: unset;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: unset;
+    outline-color: transparent;
+
+}
+
+.custome-dropdown .p-dropdown-label {
+    display: none;
+}
+
+.custome-dropdown .p-dropdown:not(.p-disabled):focus {
+    box-shadow: none;
+}
+
+.custome-calendar span input {
+    order: 1;
+    background: transparent;
+}
+
+.custome-calendar button,
+.custome-calendar input {
+    width: fit-content;
+    display: block;
+    line-height: normal;
+    height: 16px;
+}
+
+.custome-calendar .p-calendar-w-btn {
+    padding: 10px 13px 9px 12px;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.custome-calendar .p-inputtext {
+    width: 100px;
+    color: #A3AED0;
+}
+
+.custome-calendar .p-icon path {
+    fill: #A3AED0;
+}
+
+.custome-table .p-datatable-thead {
+    background-color: transparent;
+}
+
+.custome-table th {
+    background-color: transparent;
+}
+
+.custome-table th .p-column-title {
+    color: #A3AED0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.custome-table tr td {
+    font-size: 14px;
+}
+
+.custome-table .p-datatable .p-datatable-tbody>tr>td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.slider-range span:first-child {
+    background-color: #4318FF;
+    border-radius: 21px;
+}
+
+.slider-range .p-slider-handle {
+    display: none;
+}
+.p-checkbox.p-highlight .p-checkbox-box {
+    background-color: #4318FF;
+}
+.p-checkbox.p-highlight .p-checkbox-box path{
+    fill: white;
+}
+/* .custome-checkbox .p-checkbox-input {
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+} */
+ .date-section .p-datepicker table td{
+    padding: 0;
+ }
+ .date-section .p-datepicker table td.p-datepicker-today > span {
+    background-color: #4318FF;
+    color: white;
+ }
