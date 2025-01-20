@@ -4,6 +4,7 @@ import AppLayout from '../components/layout/AppLayout';
 import Dashboard from '../components/layout/Dashboard';
 import Error from '../components/Error';
 import Profile from '../components/layout/Profile';
+import NFT from '../components/layout/NFT';
 
 const AppRoutes = () => {
     return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
                 <Route path="/" element={<AppLayout />}>
                     {/* Child routes */}
                     <Route index element={<Dashboard />} />
+                    <Route path="nft" element={<NFT />} />
                     <Route path="profile" element={<Profile />} />
                 </Route>
 

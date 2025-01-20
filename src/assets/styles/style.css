@@ -1,9 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* .dm-sans-<uniquifier> {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #4318FF30;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #4318FF30;
+    background-color: #e2def0;
+}
+
+
+.p-inputtext:enabled:focus,
+.p-calendar:not(.p-calendar-disabled).p-focus>.p-inputtext,
+.p-button:focus {
+    box-shadow: none;
+}
+
 .active p {
     color: #2B3674 !important;
 }
 
 .active svg path {
-    fill: #2B3674;
+    fill: #4318FF;
+}
+
+.active .right-border {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    height: fit-content;
+    background: #4318FF;
+    border-radius: 10px;
+    width: 4px;
+    right: 0px;
+    top: 0px;
+    height: 30px;
 }
 
 :root {
@@ -104,20 +154,96 @@
 .slider-range .p-slider-handle {
     display: none;
 }
+
 .p-checkbox.p-highlight .p-checkbox-box {
     background-color: #4318FF;
 }
-.p-checkbox.p-highlight .p-checkbox-box path{
+
+.p-checkbox.p-highlight .p-checkbox-box path {
     fill: white;
 }
+
 /* .custome-checkbox .p-checkbox-input {
     border: 2px solid #d1d5db;
     border-radius: 6px;
 } */
- .date-section .p-datepicker table td{
+.date-section .p-datepicker table td {
     padding: 0;
- }
- .date-section .p-datepicker table td.p-datepicker-today > span {
+}
+
+.date-section .p-datepicker table td.p-datepicker-today>span {
     background-color: #4318FF;
     color: white;
- }
+}
+
+.nft-bg {
+    background-image: url('../images/nft_banner.png');
+    height: 350px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.nft-tabs .p-tabview-nav-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.nft-tabs .p-tabview-nav-link {
+    padding: 4px 25px;
+    border-radius: 70px;
+    background: transparent;
+
+}
+
+.nft-tabs .p-tabview-title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #4318FF;
+
+}
+
+.nft-tabs .p-tabview-nav {
+    column-gap: 16px;
+    background: transparent;
+}
+
+.nft-tabs .p-highlight {
+    background: white;
+    border-radius: 70px;
+
+}
+
+.nft-tabs .p-tabview-nav-link:hover {
+    background-color: white;
+}
+
+.nft-tabs .p-tabview .p-tabview-panels {
+    background: transparent;
+    padding: 0;
+}
+
+.trending-nft-img img {
+    width: 100%;
+}
+
+.creator-table .p-datatable .p-datatable-thead>tr>th {
+    background-color: white;
+}
+
+.creator-table .p-datatable .p-datatable-tbody>tr>td {
+    padding: 10px 16px;
+}
+
+.creator-table .p-datatable .p-column-header-content span {
+    color: #A3AED0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.history-box:hover {
+    box-shadow: 0px 18px 40px 0px rgba(112, 144, 176, 0.12);
+    cursor: pointer;
+}
