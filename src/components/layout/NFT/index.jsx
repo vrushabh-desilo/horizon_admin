@@ -239,10 +239,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -260,7 +260,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -269,10 +269,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -290,7 +290,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -299,10 +299,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -320,7 +320,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -333,10 +333,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -354,7 +354,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -363,10 +363,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -384,7 +384,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -393,10 +393,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -414,7 +414,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -427,10 +427,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -448,7 +448,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -457,10 +457,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -478,7 +478,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -487,10 +487,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -508,7 +508,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -521,10 +521,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -542,7 +542,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -551,10 +551,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -572,7 +572,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -581,10 +581,10 @@ const NFT = () => {
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                        <div className='absolute top-[14px] right-[14px]'>
+                                                        <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                                <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                                <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                                <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                                <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                             </svg>
                                                         </div>
                                                     </div>
@@ -602,7 +602,7 @@ const NFT = () => {
                                                     </div>
                                                     <div className='pt-[25px] flex justify-between items-center '>
                                                         <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -622,10 +622,10 @@ const NFT = () => {
                                         <div className='p-[17px] bg-white rounded-[20px]'>
                                             <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                 <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                <div className='absolute top-[14px] right-[14px]'>
+                                                <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                        <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                        <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                        <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                        <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                     </svg>
                                                 </div>
                                             </div>
@@ -641,7 +641,7 @@ const NFT = () => {
                                             </div>
                                             <div className='pt-[25px] flex justify-between items-center '>
                                                 <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                     Place Bid
                                                 </div>
 
@@ -650,10 +650,10 @@ const NFT = () => {
                                         <div className='p-[17px] bg-white rounded-[20px]'>
                                             <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                 <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                <div className='absolute top-[14px] right-[14px]'>
+                                                <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                        <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                        <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                        <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                        <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                     </svg>
                                                 </div>
                                             </div>
@@ -669,7 +669,7 @@ const NFT = () => {
                                             </div>
                                             <div className='pt-[25px] flex justify-between items-center '>
                                                 <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 1.30 ETH</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                     Place Bid
                                                 </div>
 
@@ -678,10 +678,10 @@ const NFT = () => {
                                         <div className='p-[17px] bg-white rounded-[20px]'>
                                             <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative'>
                                                 <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
-                                                <div className='absolute top-[14px] right-[14px]'>
+                                                <div className='absolute top-[14px] right-[14px] group cursor-pointer'>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34" fill="none">
-                                                        <rect width="34.3736" height="34" rx="17" fill="white" />
-                                                        <path d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
+                                                        <rect className='group-hover:fill-[#4318FF] transition-all duration-300' width="34.3736" height="34" rx="17" fill="white" />
+                                                        <path className='group-hover:fill-[#fff] transition-all duration-300' d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z" fill="#4318FF" />
                                                     </svg>
                                                 </div>
                                             </div>
@@ -699,7 +699,7 @@ const NFT = () => {
                                             </div>
                                             <div className='pt-[25px] flex justify-between items-center '>
                                                 <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 6.58 ETH</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px]'>
+                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                     Place Bid
                                                 </div>
                                             </div>
@@ -717,7 +717,7 @@ const NFT = () => {
                                         <div className='h-[calc(100%_-_52px)]'>
                                             <div className='flex sticky top-0 z-[1] justify-between items-center bg-white p-[20px] pb-0 overflow-auto shadow-[0px_40px_50px_-20px_rgba(112,144,176,0.12)]'>
                                                 <p className='text-[20px] font-bold leading-[32px]'>Top Creators</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#F4F7FE] text-[#4318FF] font-[500] text-[14px] leading-[24px]'>
+                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#F4F7FE] text-[#4318FF] font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#4318FF] hover:text-white transition-all duration-300 '>
                                                     See all
                                                 </div>
                                             </div>
@@ -736,7 +736,7 @@ const NFT = () => {
                                         <div>
                                             <div className='flex justify-between items-center bg-white p-[20px] pb-0 overflow-auto shadow-[0px_40px_50px_-20px_rgba(112,144,176,0.12)]'>
                                                 <p className='text-[20px] font-bold leading-[32px]'>History</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#F4F7FE] text-[#4318FF] font-[500] text-[14px] leading-[24px]'>
+                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#F4F7FE] text-[#4318FF] font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#4318FF] hover:text-white transition-all duration-300 '>
                                                     See all
                                                 </div>
                                             </div>

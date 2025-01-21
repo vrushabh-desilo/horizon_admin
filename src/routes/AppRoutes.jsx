@@ -5,6 +5,7 @@ import Dashboard from '../components/layout/Dashboard';
 import Error from '../components/Error';
 import Profile from '../components/layout/Profile';
 import NFT from '../components/layout/NFT';
+import Table from '../components/layout/Table';
 
 const AppRoutes = () => {
     return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
                     <Route index element={<Dashboard />} />
                     <Route path="nft" element={<NFT />} />
                     <Route path="profile" element={<Profile />} />
+                    <Route path="table" element={<Table />} />
                 </Route>
 
                 {/* Fallback for undefined routes */}
