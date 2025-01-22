@@ -6,6 +6,7 @@ import Error from '../components/Error';
 import Profile from '../components/layout/Profile';
 import NFT from '../components/layout/NFT';
 import Table from '../components/layout/Table';
+import Kanban from '../components/layout/Kanban';
 
 const AppRoutes = () => {
     return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
                     <Route path="nft" element={<NFT />} />
                     <Route path="profile" element={<Profile />} />
                     <Route path="table" element={<Table />} />
+                    <Route path="kanban" element={<Kanban />} />
                 </Route>
 
                 {/* Fallback for undefined routes */}
