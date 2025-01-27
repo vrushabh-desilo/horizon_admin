@@ -165,6 +165,7 @@
 .tables-table .p-datatable-tbody tr td:last-child {
     padding-right: 25px;
 }
+
 .tables-table .p-datatable .p-datatable-thead>tr>th:first-child {
     padding-left: 25px;
 }
@@ -273,4 +274,30 @@
 .history-box:hover {
     box-shadow: 0px 18px 40px 0px rgba(112, 144, 176, 0.12);
     cursor: pointer;
+}
+
+.profile-custome-switch {
+    width: 36px;
+}
+
+.profile-custome-switch .p-inputswitch-slider:before {
+    height: 16px;
+    width: 16px;
+    left: 0;
+    margin-top: -8px;
+}
+
+.profile-custome-switch .p-inputswitch-slider {
+    background-color: #4318FF;
+}
+
+.signin_bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../images/signin_Background.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    border-bottom-left-radius: 200px;
 }

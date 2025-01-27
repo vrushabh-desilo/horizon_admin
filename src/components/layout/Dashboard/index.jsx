@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import userProfile from '../../../assets/images/Elipse 5.png';
 import { Image } from 'primereact/image';
@@ -15,6 +15,7 @@ import { Slider } from 'primereact/slider';
 import { Checkbox } from 'primereact/checkbox';
 import starbucks_coffee from '../../../assets/images/Starbuck.png';
 import starbucks_logo from '../../../assets/images/starbucks_logo.png';
+import { Menu } from 'primereact/menu';
 
 const Dashboard = () => {
     const [date, setDate] = useState(null);
@@ -167,6 +168,23 @@ const Dashboard = () => {
             </div>
         );
     };
+    const menuLeft = useRef(null);
+    const items = [
+        {
+            label: 'Options',
+            items: [
+                {
+                    label: 'Refresh',
+                    icon: 'pi pi-refresh'
+                },
+                {
+                    label: 'Export',
+                    icon: 'pi pi-upload'
+                }
+            ]
+        }
+    ];
+
 
     return (
         <div className="">
@@ -217,7 +235,7 @@ const Dashboard = () => {
                         />
                     </div>
                     {/* notifaction */}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -237,9 +255,10 @@ const Dashboard = () => {
                                 </clipPath>
                             </defs>
                         </svg>
+                        <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                     </div>
                     {/* night mode */}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="18"
@@ -261,7 +280,7 @@ const Dashboard = () => {
                         </svg>
                     </div>
                     {/*  */}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -283,7 +302,7 @@ const Dashboard = () => {
                         </svg>
                     </div>
                     {/* user-profile */}
-                    <div className="max-w-[50px] rounded-full overflow-auto">
+                    <div className="max-w-[50px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <Image
                             width={300}
                             height={300}
@@ -480,7 +499,7 @@ const Dashboard = () => {
                                 Button Display
                             </label> */}
                             </div>
-                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <g clip-path="url(#clip0_201_2536)">
                                         <path d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z" fill="#4318FF" />
@@ -511,7 +530,7 @@ const Dashboard = () => {
                     <div className="p-[25px] bg-white rounded-[20px]">
                         <div className='flex justify-between items-center'>
                             <p className='text-[24px] leading-[normal] font-bold'>Weekly Revenue</p>
-                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <g clip-path="url(#clip0_201_2536)">
                                         <path d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z" fill="#4318FF" />
@@ -531,7 +550,7 @@ const Dashboard = () => {
                     <div className="p-[25px] bg-white rounded-[20px]">
                         <div className='flex justify-between items-center'>
                             <p className='text-[24px] leading-[normal] font-bold'>Check Table</p>
-                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <g clip-path="url(#clip0_201_2551)">
                                         <path d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z" fill="#4318FF" />
@@ -579,7 +598,7 @@ const Dashboard = () => {
                             <div>
                                 <div className='flex justify-between items-center'>
                                     <p className='text-[16px] leading-[28px] font-bold'>Your Pie Chart</p>
-                                    <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                                    <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <g clip-path="url(#clip0_201_2536)">
                                                 <path d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z" fill="#4318FF" />
@@ -622,7 +641,7 @@ const Dashboard = () => {
                     <div className="p-[25px] bg-white rounded-[20px]">
                         <div className='flex justify-between items-center'>
                             <p className='text-[24px] leading-[normal] font-bold'>Complex Table</p>
-                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                            <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <g clip-path="url(#clip0_201_2551)">
                                         <path d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z" fill="#4318FF" />
@@ -653,7 +672,7 @@ const Dashboard = () => {
                                     </div>
                                     <p className='text-[18px] leading-[normal] font-bold'>Tasks</p>
                                 </div>
-                                <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                                <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clip-path="url(#clip0_201_2551)">
                                             <path d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z" fill="#4318FF" />
@@ -752,7 +771,7 @@ const Dashboard = () => {
                         <div className="p-[16px] bg-white rounded-[20px] date-section">
                             <div className='flex justify-between items-center'>
                                 <p className='text-[18px] leading-[32px] font-bold'>Team members</p>
-                                <div className='p-[6px] rounded-[10px] bg-[#F4F7FE] cursor-pointer'>
+                                <div className='p-[6px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clip-path="url(#clip0_201_2854)">
                                             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" fill="#4318FF" />

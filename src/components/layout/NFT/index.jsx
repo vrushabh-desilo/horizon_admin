@@ -1,15 +1,32 @@
 import { Image } from 'primereact/image';
 import userProfile from '../../../assets/images/Elipse 5.png';
 import { InputText } from 'primereact/inputtext'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { TabView, TabPanel } from 'primereact/tabview';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Slider } from 'primereact/slider';
+import { Menu } from 'primereact/menu';
 
 
 const NFT = () => {
     const [value, setValue] = useState('');
+    const menuLeft = useRef(null);
+    const items = [
+        {
+            label: 'Options',
+            items: [
+                {
+                    label: 'Refresh',
+                    icon: 'pi pi-refresh'
+                },
+                {
+                    label: 'Export',
+                    icon: 'pi pi-upload'
+                }
+            ]
+        }
+    ];
     const [top_Creators, setTop_Creators] = useState([
         {
             name: '@maddison_c21',
@@ -135,7 +152,7 @@ const NFT = () => {
                         </div>
                     </div>
                     {/* notifaction */}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -155,9 +172,10 @@ const NFT = () => {
                                 </clipPath>
                             </defs>
                         </svg>
+                        <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                     </div>
                     {/* night mode */}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="18"
@@ -179,7 +197,7 @@ const NFT = () => {
                         </svg>
                     </div>
                     {/*  */}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -201,7 +219,7 @@ const NFT = () => {
                         </svg>
                     </div>
                     {/* user-profile */}
-                    <div className="max-w-[50px] rounded-full overflow-auto">
+                    <div className="max-w-[50px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                         <Image
                             width={300}
                             height={300}

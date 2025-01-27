@@ -1,16 +1,32 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import KanbanBoard from '../DND/KanbanBoard'
 import { InputText } from 'primereact/inputtext'
 import { Image } from 'primereact/image'
 import userProfile from '../../../assets/images/Elipse 5.png';
+import { Menu } from 'primereact/menu'
 
 
 
 const Kanban = () => {
     const [value, setValue] = useState('');
-
+    const menuLeft = useRef(null);
+    const items = [
+        {
+            label: 'Options',
+            items: [
+                {
+                    label: 'Refresh',
+                    icon: 'pi pi-refresh'
+                },
+                {
+                    label: 'Export',
+                    icon: 'pi pi-upload'
+                }
+            ]
+        }
+    ];
     return (
         <div>
             <div>
@@ -62,7 +78,7 @@ const Kanban = () => {
                                 />
                             </div>
                             {/* notifaction */}
-                            <div className='cursor-pointer'>
+                            <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -82,9 +98,10 @@ const Kanban = () => {
                                         </clipPath>
                                     </defs>
                                 </svg>
+                                <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                             </div>
                             {/* night mode */}
-                            <div className='cursor-pointer'>
+                            <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="18"
@@ -106,7 +123,7 @@ const Kanban = () => {
                                 </svg>
                             </div>
                             {/*  */}
-                            <div className='cursor-pointer'>
+                            <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -128,7 +145,7 @@ const Kanban = () => {
                                 </svg>
                             </div>
                             {/* user-profile */}
-                            <div className="max-w-[50px] rounded-full overflow-auto">
+                            <div className="max-w-[50px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
                                 <Image
                                     width={300}
                                     height={300}
