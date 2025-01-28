@@ -185,6 +185,11 @@
 
 .p-checkbox.p-highlight .p-checkbox-box {
     background-color: #4318FF;
+    border-radius: 2px;
+}
+
+.p-checkbox .p-checkbox-box {
+    border-radius: 2px;
 }
 
 .p-checkbox.p-highlight .p-checkbox-box path {
@@ -209,6 +214,7 @@
     height: 350px;
     border-radius: 20px;
     width: 100%;
+    background-size: cover;
 }
 
 .nft-tabs .p-tabview-nav-container {
@@ -300,4 +306,51 @@
     height: 100vh;
     width: 100%;
     border-bottom-left-radius: 200px;
+}
+
+.task-table .p-datatable .p-datatable-tbody > tr > td {
+    padding: 8px 4px;
+}
+.p-sidebar-custom-header {
+    column-gap: 16px;
+}
+
+.p-datatable-wrapper::-webkit-scrollbar ,
+.custome-table ::-webkit-scrollbar {
+    display: none !important;
+}
+.p-calendar .p-datepicker {
+    width: fit-content;
+    padding: 0;
+}
+.p-datepicker table td > span {
+    width: 36px;
+    height: 36px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .signin_bg {
+        height: 100%;
+        border-bottom-left-radius: 100px;
+    }
+    .nft-tabs .p-tabview-nav-container {
+        position: unset;
+        margin-bottom: 16px;
+    }
+    .nft-bg {
+        height: 230px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nft-bg{
+        height: 258px;
+    }
+    .nft-tabs .p-tabview-nav-link {
+        padding: 2px 16px;
+    }
 }

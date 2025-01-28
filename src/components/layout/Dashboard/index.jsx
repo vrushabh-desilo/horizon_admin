@@ -16,8 +16,10 @@ import { Checkbox } from 'primereact/checkbox';
 import starbucks_coffee from '../../../assets/images/Starbuck.png';
 import starbucks_logo from '../../../assets/images/starbucks_logo.png';
 import { Menu } from 'primereact/menu';
+import Mobile_Menu from '../Mobile_Menu';
 
-const Dashboard = () => {
+const Dashboard = ({ name }) => {
+    console.log('name', name)
     const [date, setDate] = useState(null);
     const [value, setValue] = useState('');
     const [selectedCity, setSelectedCity] = useState(null);
@@ -161,6 +163,7 @@ const Dashboard = () => {
         return (
             <div className='flex gap-[16px] custome-checkbox'>
                 <Checkbox
+                    variant='filled'
                     onChange={() => handleCheckboxChange(rowData)}
                     checked={rowData.check}
                 />
@@ -188,19 +191,19 @@ const Dashboard = () => {
 
     return (
         <div className="">
-            <div className=" flex justify-between items-center sticky top-0 bg-[#F4F7FE]">
+            <div className=" flex justify-between items-center sticky top-0 pt-[40px] bg-[#F4F7FE] pb-[30px] z-[99]">
                 <div className="">
                     <div className="flex items-center text-[#707EAE] gap-[5px]">
                         <p>Pages</p>
                         <span>/</span>
                         <p>Dashboard</p>
                     </div>
-                    <h1 className="font-bold text-[34px] leading-[42px]">
+                    <h1 className="font-bold 2md:text-[34px] text-[30px] leading-[42px]">
                         Main Dashboard
                     </h1>
                 </div>
-                <div className="bg-white p-[10px] rounded-[30px] flex items-center gap-[20px]">
-                    <div className="flex items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
+                <div className="bg-white p-[10px] rounded-[30px] flex items-center 2md:gap-[20px] gap-[16px]">
+                    <div className="2sm:flex hidden items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
                         <div>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +238,7 @@ const Dashboard = () => {
                         />
                     </div>
                     {/* notifaction */}
-                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                    <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -258,7 +261,7 @@ const Dashboard = () => {
                         <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                     </div>
                     {/* night mode */}
-                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                    <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="18"
@@ -280,7 +283,7 @@ const Dashboard = () => {
                         </svg>
                     </div>
                     {/*  */}
-                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                    <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -302,7 +305,7 @@ const Dashboard = () => {
                         </svg>
                     </div>
                     {/* user-profile */}
-                    <div className="max-w-[50px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                    <div className="2md:w-[50px] w-[40px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <Image
                             width={300}
                             height={300}
@@ -312,12 +315,15 @@ const Dashboard = () => {
                             unoptimized
                         />
                     </div>
+                    <div className='2lg:hidden block'>
+                        <Mobile_Menu />
+                    </div>
                 </div>
             </div>
 
-            <div className='h-[calc(100vh_-_130px)] overflow-auto'>
+            <div className=' overflow-auto'>
                 {/* KPIS */}
-                <div className="pt-[30px] flex gap-[16px] items-center">
+                <div className="grid 2xl:grid-cols-6 2lg:grid-cols-3 2sm:grid-cols-2 gap-[16px] items-center">
                     <div className="ps-[17px] pe-[12px] py-[20px] flex items-center gap-[18px] bg-white rounded-[20px] min-w-[248px]">
                         <div className="rounded-full bg-[#F4F7FE] p-[11.5px] flex justify-center items-center">
                             <svg
@@ -403,7 +409,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className="ps-[17px] pe-[12px] py-[20px] flex items-center gap-[18px] bg-white rounded-[20px] min-w-[248px]">
+                    <div className="ps-[17px] pe-[12px] py-[20px] flex items-center justify-between gap-[18px] bg-white rounded-[20px] min-w-[248px]">
                         <div>
                             <p className="text-[14px] leading-[24px] font-medium text-[#A3AED0]">
                                 Your balance
@@ -490,7 +496,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-[20px] pt-[20px]">
+                <div className="grid 2sm:grid-cols-2 gap-[20px] pt-[20px]">
                     <div className="p-[25px] bg-white rounded-[20px]">
                         <div className='flex justify-between items-center'>
                             <div className="bg-[#F4F7FE] w-fit custome-calendar rounded-[7px]">
@@ -512,9 +518,9 @@ const Dashboard = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className='flex gap-[30px] pt-[40px]'>
+                        <div className='3lg:flex gap-[30px] xl:pt-[40px] pt-[30px]'>
                             <div>
-                                <p className='text-[#2B3674] text-[34px] font-bold leading-[42px] '>$37.5K</p>
+                                <p className='text-[#2B3674] text-[34px] font-bold leading-[42px]'>$37.5K</p>
                                 <div className="flex items-center gap-[4px]">
                                     <p className="text-[#A3AED0] text-[12px] leading-[20px] font-normal">
                                         Total Spent
@@ -547,7 +553,7 @@ const Dashboard = () => {
                             <BarChart />
                         </div>
                     </div>
-                    <div className="p-[25px] bg-white rounded-[20px]">
+                    <div className="p-[25px] bg-white rounded-[20px] max-w-[100vw] overflow-auto">
                         <div className='flex justify-between items-center'>
                             <p className='text-[24px] leading-[normal] font-bold'>Check Table</p>
                             <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
@@ -563,17 +569,17 @@ const Dashboard = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className='custome-table pt-[8px]'>
+                        <div className='custome-table pt-[8px] '>
                             <DataTable value={products} >
-                                <Column field="name" header="Name"></Column>
-                                <Column field="process" header="Process"></Column>
-                                <Column field="quantity" header="Quantity"></Column>
-                                <Column field="date" header="Date"></Column>
+                                <Column className='whitespace-nowrap' field="name" header="Name"></Column>
+                                <Column className='whitespace-nowrap' field="process" header="Process"></Column>
+                                <Column className='whitespace-nowrap' field="quantity" header="Quantity"></Column>
+                                <Column className='whitespace-nowrap' field="date" header="Date"></Column>
                             </DataTable>
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-[20px]'>
-                        <div className="p-[25px] bg-white rounded-[20px]">
+                    <div className='xl:grid grid-cols-2 gap-[20px]'>
+                        <div className="p-[25px] bg-white rounded-[20px] h-full">
                             <div>
                                 <div className="flex items-center justify-between gap-[4px]">
                                     <p className="text-[#A3AED0] text-[12px] leading-[20px] font-normal">
@@ -594,7 +600,7 @@ const Dashboard = () => {
                                 <Daily_Traffic_Bar_Chart />
                             </div>
                         </div>
-                        <div className="p-[25px] bg-white rounded-[20px]">
+                        <div className="p-[25px] bg-white rounded-[20px] xl:block hidden">
                             <div>
                                 <div className='flex justify-between items-center'>
                                     <p className='text-[16px] leading-[28px] font-bold'>Your Pie Chart</p>
@@ -638,7 +644,50 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="p-[25px] bg-white rounded-[20px]">
+                    <div className="p-[25px] bg-white rounded-[20px] xl:hidden block">
+                        <div>
+                            <div className='flex justify-between items-center'>
+                                <p className='text-[16px] leading-[28px] font-bold'>Your Pie Chart</p>
+                                <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_201_2536)">
+                                            <path d="M6.4 9.2H6.6C7.37 9.2 8 9.83 8 10.6V17.6C8 18.37 7.37 19 6.6 19H6.4C5.63 19 5 18.37 5 17.6V10.6C5 9.83 5.63 9.2 6.4 9.2ZM12 5C12.77 5 13.4 5.63 13.4 6.4V17.6C13.4 18.37 12.77 19 12 19C11.23 19 10.6 18.37 10.6 17.6V6.4C10.6 5.63 11.23 5 12 5ZM17.6 13C18.37 13 19 13.63 19 14.4V17.6C19 18.37 18.37 19 17.6 19C16.83 19 16.2 18.37 16.2 17.6V14.4C16.2 13.63 16.83 13 17.6 13Z" fill="#4318FF" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_201_2536">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className=''>
+                                <PieChartDemo />
+                            </div>
+                            <div className='mt-[20px] flex justify-between items-center px-[40px] py-[14px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] rounded-[15px]'>
+                                <div>
+                                    <div className='flex items-center gap-[5px]'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                            <circle cx="4" cy="4" r="4" fill="#4318FF" />
+                                        </svg>
+                                        <p className='text-[#A3AED0] text-[12px] font-medium'>Your files</p>
+                                    </div>
+                                    <p className='text-[#2B3674] text-[18px] leading-[30px] font-bold text-center'>63%</p>
+                                </div>
+                                <div>
+                                    <div className='flex items-center gap-[5px]'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                            <circle cx="4" cy="4" r="4" fill="#6AD2FF" />
+                                        </svg>
+                                        <p className='text-[#A3AED0] text-[12px] font-medium'>System</p>
+                                    </div>
+                                    <p className='text-[#2B3674] text-[18px] leading-[30px] font-bold text-center'>25%</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-[25px] bg-white rounded-[20px] max-w-[100vw] overflow-auto">
                         <div className='flex justify-between items-center'>
                             <p className='text-[24px] leading-[normal] font-bold'>Complex Table</p>
                             <div className='p-[5px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
@@ -656,15 +705,15 @@ const Dashboard = () => {
                         </div>
                         <div className='custome-table pt-[8px]'>
                             <DataTable value={complexTableData} >
-                                <Column field="name" header="Name"></Column>
-                                <Column field="status" header="Status"></Column>
-                                <Column field="date" header="Date"></Column>
-                                <Column field="process" header="Process" body={sliderDataBody}></Column>
+                                <Column className='whitespace-nowrap' field="name" header="Name"></Column>
+                                <Column className='whitespace-nowrap' field="status" header="Status"></Column>
+                                <Column className='whitespace-nowrap' field="date" header="Date"></Column>
+                                <Column className='whitespace-nowrap' field="process" header="Process" body={sliderDataBody}></Column>
                             </DataTable>
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-[20px]'>
-                        <div className="p-[25px] bg-white rounded-[20px]">
+                    <div className='xl:grid grid-cols-2 gap-[20px] h-full'>
+                        <div className="p-[25px] bg-white rounded-[20px] h-full max-w-[100vw] overflow-auto">
                             <div className='flex justify-between items-center'>
                                 <div className='flex items-center gap-[12px]'>
                                     <div className='flex justify-center items-center h-[38px] w-[38px] rounded-full bg-[#EFF4FB]'>
@@ -685,17 +734,20 @@ const Dashboard = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <div className='custome-table pt-[8px]'>
+                            <div className='custome-table pt-[8px] task-table'>
                                 <DataTable value={taskData} >
                                     <Column field="name" body={checkboxBodyTemplate}></Column>
                                 </DataTable>
                             </div>
                         </div>
-                        <div className="p-[16px] bg-white rounded-[20px] date-section">
+                        <div className="p-[16px] bg-white rounded-[20px] date-section xl:block hidden">
                             <Calendar className='' value={date} onChange={(e) => setDate(e.value)} inline showWeek />
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-[20px]'>
+                    <div className="p-[16px] bg-white rounded-[20px] date-section xl:hidden block">
+                        <Calendar className='2sm:w-full w-fit' value={date} onChange={(e) => setDate(e.value)} inline showWeek />
+                    </div>
+                    <div className='xl:grid grid-cols-2 gap-[20px]'>
                         <div className="p-[25px] bg-white rounded-[20px]">
                             <div className='flex items-center gap-[16px]'>
                                 <div className='rounded-[15px] p-[10px] bg-[#FEEFEE] w-fit'>
@@ -768,7 +820,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-[16px] bg-white rounded-[20px] date-section">
+                        <div className="p-[16px] bg-white rounded-[20px] date-section xl:block hidden">
                             <div className='flex justify-between items-center'>
                                 <p className='text-[18px] leading-[32px] font-bold'>Team members</p>
                                 <div className='p-[6px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
@@ -857,8 +909,96 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-[16px]'>
-                        <div className="p-[30px] bg-white rounded-[20px] date-section">
+                    <div className="p-[16px] bg-white rounded-[20px] date-section xl:hidden block">
+                        <div className='flex justify-between items-center'>
+                            <p className='text-[18px] leading-[32px] font-bold'>Team members</p>
+                            <div className='p-[6px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_201_2854)">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" fill="#4318FF" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_201_2854">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div className='pt-[20px] flex flex-col gap-[16px]'>
+                            <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] px-[16px] py-[12px]'>
+                                <div className='flex justify-between items-center'>
+                                    <div className='flex items-center gap-[12px]'>
+                                        <Image src='https://dummyimage.com/50x50/E0E5F2/040405' alt='avatar' className='w-[46px] h-[46px] rounded-full overflow-auto' />
+                                        <div>
+                                            <div className='text-[16px] leading-[28px] font-bold '>Adela Parkson</div>
+                                            <div className='text-[12px] leading-[20px] font-medium text-[#A3AED0]'>Creative Director</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <g clip-path="url(#clip0_201_2845)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#A3AED0" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_201_2845">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] px-[16px] py-[12px]'>
+                                <div className='flex justify-between items-center'>
+                                    <div className='flex items-center gap-[12px]'>
+                                        <Image src='https://dummyimage.com/50x50/E0E5F2/040405' alt='avatar' className='w-[46px] h-[46px] rounded-full overflow-auto' />
+                                        <div>
+                                            <div className='text-[16px] leading-[28px] font-bold '>Christian Mad</div>
+                                            <div className='text-[12px] leading-[20px] font-medium text-[#A3AED0]'>Product Designer</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <g clip-path="url(#clip0_201_2845)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#A3AED0" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_201_2845">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] px-[16px] py-[12px]'>
+                                <div className='flex justify-between items-center'>
+                                    <div className='flex items-center gap-[12px]'>
+                                        <Image src='https://dummyimage.com/50x50/E0E5F2/040405' alt='avatar' className='w-[46px] h-[46px] rounded-full overflow-auto' />
+                                        <div>
+                                            <div className='text-[16px] leading-[28px] font-bold '>Jason Statham</div>
+                                            <div className='text-[12px] leading-[20px] font-medium text-[#A3AED0]'>Junior Graphic Designer</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <g clip-path="url(#clip0_201_2845)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#A3AED0" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_201_2845">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='xl:grid grid-cols-2 gap-[16px]'>
+                        <div className="p-[30px] bg-white rounded-[20px] date-section h-full">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91" fill="none">
                                     <g clip-path="url(#clip0_201_2857)">
@@ -877,7 +1017,7 @@ const Dashboard = () => {
                                 Cards
                             </div>
                         </div>
-                        <div className="p-[20px] bg-white rounded-[20px] date-section">
+                        <div className="p-[20px] bg-white rounded-[20px] date-section xl:block hidden">
                             <div className='relative'>
                                 <div className='bg-[linear-gradient(0deg,_#111C44_-31.39%,_rgba(17,_28,_68,_0.00)_96.52%)] absolute top-0 left-0 w-full h-full z-[1] rounded-[20px]'></div>
                                 <div className='rounded-[12px] absolute top-[14px] right-[14px] backdrop-blur-[25px] w-[43px] h-[43px] z-[2] p-[10px] bg-[linear-gradient(113deg,_rgba(255,_255,_255,_0.47)_0%,_rgba(255,_255,_255,_0.00)_110.84%)]'>
@@ -912,6 +1052,43 @@ const Dashboard = () => {
                                     </div>
                                     <p className='text-[18px] leading-[30px] font-medium pt-[6px] text-[#A3AED0]'>10% cashback & off</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-[20px] bg-white rounded-[20px] date-section xl:hidden block">
+                        <div className='relative'>
+                            <div className='bg-[linear-gradient(0deg,_#111C44_-31.39%,_rgba(17,_28,_68,_0.00)_96.52%)] absolute top-0 left-0 w-full h-full z-[1] rounded-[20px]'></div>
+                            <div className='rounded-[12px] absolute top-[14px] right-[14px] backdrop-blur-[25px] w-[43px] h-[43px] z-[2] p-[10px] bg-[linear-gradient(113deg,_rgba(255,_255,_255,_0.47)_0%,_rgba(255,_255,_255,_0.00)_110.84%)]'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_201_2868)">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_201_2868">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <Image src={starbucks_coffee} className='rounded-[20px]' alt="starbucks_coffee" />
+                            <Image src={starbucks_logo} className='rounded-[20px] absolute bottom-[-25px] left-[14px] z-[2]' alt="starbucks_logo" />
+                        </div>
+                        <div className='pt-[40px]'>
+                            <p className='text-[24px] leading-[32px] font-bold pt-[16px]'>Starbucks</p>
+                            <div className='flex items-center gap-[10px]'>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_201_2865)">
+                                            <path d="M21.9 5H18V2C18 1.45 17.55 1 17 1C16.45 1 16 1.45 16 2V5H12.1C11.51 5 11.05 5.51 11.1 6.1L11.22 7.31C14.9 8.16 18 10.77 18 15L18.02 23H19.72C20.56 23 21.25 22.35 21.35 21.53L22.89 6.1C22.95 5.51 22.49 5 21.9 5ZM15 21H2C1.45 21 1 21.45 1 22C1 22.55 1.45 23 2 23H15C15.55 23 16 22.55 16 22C16 21.45 15.55 21 15 21ZM2.1 15H14.9C15.52 15 16.01 14.44 15.89 13.84C15.24 10.61 11.87 8.99 8.5 8.99C5.13 8.99 1.77 10.61 1.11 13.84C0.99 14.44 1.49 15 2.1 15ZM15 17H2C1.45 17 1 17.45 1 18C1 18.55 1.45 19 2 19H15C15.55 19 16 18.55 16 18C16 17.45 15.55 17 15 17Z" fill="#A3AED0" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_201_2865">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <p className='text-[18px] leading-[30px] font-medium pt-[6px] text-[#A3AED0]'>10% cashback & off</p>
                             </div>
                         </div>
                     </div>

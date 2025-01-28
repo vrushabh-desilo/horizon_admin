@@ -7,6 +7,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Slider } from 'primereact/slider';
 import { Menu } from 'primereact/menu';
+import Mobile_Menu from '../Mobile_Menu';
 
 
 const NFT = () => {
@@ -93,7 +94,7 @@ const NFT = () => {
 
     return (
         <div className="">
-            <div className=" flex justify-between items-center sticky top-0 bg-[#F4F7FE]">
+            <div className="  flex justify-between items-center sticky top-0 pt-[40px] bg-[#F4F7FE] pb-[30px] z-[99]">
                 <div className="">
                     <div className="flex items-center text-[#707EAE] gap-[5px]">
                         <p>Pages</p>
@@ -104,8 +105,8 @@ const NFT = () => {
                         NFT Marketplace
                     </h1>
                 </div>
-                <div className="bg-white p-[10px] rounded-[30px] flex items-center gap-[20px]">
-                    <div className="flex items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
+                <div className="bg-white p-[10px] rounded-[30px] flex items-center 2md:gap-[20px] gap-[16px]">
+                    <div className="2sm:flex hidden items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
                         <div>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -139,20 +140,8 @@ const NFT = () => {
                             onChange={(e) => setValue(e.target.value)}
                         />
                     </div>
-
-                    <div className='bg-[#F4F7FE] rounded-[49px] p-[6px]'>
-                        <div className='flex items-center gap-[7px]'>
-                            <div className=''>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                                    <circle cx="14.5" cy="14.5" r="14.5" fill="white" />
-                                    <path d="M14.466 18.4825L10 15.945L14.4654 22L18.9351 15.945L14.4642 18.4825H14.466ZM14.534 8L10.0667 15.1301L14.5334 17.6699L19 15.1324L14.534 8Z" fill="#2B3674" />
-                                </svg>
-                            </div>
-                            <p className='text-[#2B3674] text-[14px] leading-[20px] font-bold'>1,924 ETH</p>
-                        </div>
-                    </div>
                     {/* notifaction */}
-                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                    <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -175,7 +164,7 @@ const NFT = () => {
                         <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                     </div>
                     {/* night mode */}
-                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                    <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="18"
@@ -197,7 +186,7 @@ const NFT = () => {
                         </svg>
                     </div>
                     {/*  */}
-                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                    <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -219,7 +208,7 @@ const NFT = () => {
                         </svg>
                     </div>
                     {/* user-profile */}
-                    <div className="max-w-[50px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                    <div className="2md:w-[50px] w-[40px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                         <Image
                             width={300}
                             height={300}
@@ -229,17 +218,20 @@ const NFT = () => {
                             unoptimized
                         />
                     </div>
+                    <div className='2lg:hidden block'>
+                        <Mobile_Menu />
+                    </div>
                 </div>
             </div>
 
             <div className=''>
-                <div className='flex gap-[20px] mt-[20px]'>
-                    <div className='w-full h-[calc(100vh_-_130px)] overflow-auto'>
-                        <div className='py-[56px] ps-[64px] nft-bg relative'>
-                            <div className='absolute max-w-[370px]'>
-                                <p className='text-[34px] font-bold leading-[42px] text-white'>Discover, collect, and sell extraordinary NFTs</p>
+                <div className='2lg:grid 2lg:grid-cols-3 gap-[20px]'>
+                    <div className='w-full col-span-2'>
+                        <div className='md:py-[56px] md:ps-[64px] nft-bg relative'>
+                            <div className='md:absolute md:max-w-[370px] w-auto'>
+                                <p className='md:text-[34px] text-[20px] font-bold md:leading-[42px] leading-[normal] text-white'>Discover, collect, and sell extraordinary NFTs</p>
                                 <p className='text-[16px] font-medium leading-[28px] text-[#E3DAFF] pt-[14px]'>Enter in this creative world. Discover now the latest NFTs or start creating your own!</p>
-                                <div className='flex justify-between items-center mt-[50px]'>
+                                <div className='flex md:justify-between justify-start items-center md:mt-[50px] 2sm:mt-[40px] sm:mt-[50px] mt-[36px]'>
                                     <div className='text-[14px] leading-[24px] font-bold text-black rounded-[16px] px-[27px] py-[11px] bg-white hover:bg-[#4318FF] hover:text-white transition-all duration-300 cursor-pointer'>
                                         Discover now
                                     </div>
@@ -253,7 +245,7 @@ const NFT = () => {
                                 <div className='w-full nft-tabs'>
                                     <TabView>
                                         <TabPanel header="Art">
-                                            <div className='grid grid-cols-3 gap-[20px]'>
+                                            <div className='grid md:grid-cols-3 grid-cols-1 gap-[20px]'>
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
@@ -264,10 +256,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Abstract Colors</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Esthera Jackson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Esthera Jackson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -276,9 +268,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -294,10 +286,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>ETH AI Brain</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Nick Wilson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Nick Wilson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -306,9 +298,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -324,10 +316,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Mesh Gradients</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Will Smith</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Will Smith</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -336,9 +328,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -347,7 +339,7 @@ const NFT = () => {
                                             </div>
                                         </TabPanel>
                                         <TabPanel header="Music">
-                                            <div className='grid grid-cols-3 gap-[20px]'>
+                                            <div className='grid md:grid-cols-3 grid-cols-1 gap-[20px]'>
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
@@ -358,10 +350,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Music</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Esthera Jackson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Esthera Jackson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -370,9 +362,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -388,10 +380,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>ETH AI Brain</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Nick Wilson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Nick Wilson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -400,9 +392,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -418,10 +410,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Mesh Gradients</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Will Smith</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Will Smith</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -430,9 +422,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -441,7 +433,7 @@ const NFT = () => {
                                             </div>
                                         </TabPanel>
                                         <TabPanel header="Collectibles">
-                                            <div className='grid grid-cols-3 gap-[20px]'>
+                                            <div className='grid md:grid-cols-3 grid-cols-1 gap-[20px]'>
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
@@ -452,10 +444,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Collectibles</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Esthera Jackson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Esthera Jackson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -464,9 +456,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -482,10 +474,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>ETH AI Brain</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Nick Wilson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Nick Wilson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -494,9 +486,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -512,10 +504,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Mesh Gradients</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Will Smith</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Will Smith</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -524,9 +516,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -535,7 +527,7 @@ const NFT = () => {
                                             </div>
                                         </TabPanel>
                                         <TabPanel header="Sports">
-                                            <div className='grid grid-cols-3 gap-[20px]'>
+                                            <div className='grid md:grid-cols-3 grid-cols-1 gap-[20px]'>
                                                 <div className='p-[17px] bg-white rounded-[20px]'>
                                                     <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                         <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
@@ -546,10 +538,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Sports</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Esthera Jackson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Esthera Jackson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -558,9 +550,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -576,10 +568,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>ETH AI Brain</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Nick Wilson</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Nick Wilson</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -588,9 +580,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.82 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -606,10 +598,10 @@ const NFT = () => {
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    <div className='flex justify-between items-center'>
-                                                        <div className='pt-[20px]'>
+                                                    <div className='2xl:flex justify-between items-center'>
+                                                        <div className='2xl:pt-[20px] pt-[10px]'>
                                                             <p className='text-[18px] font-bold leading-[30px]'>Mesh Gradients</p>
-                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Will Smith</p>
+                                                            <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Will Smith</p>
                                                         </div>
                                                         <div className='flex items-center'>
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -618,9 +610,9 @@ const NFT = () => {
                                                             <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                         </div>
                                                     </div>
-                                                    <div className='pt-[25px] flex justify-between items-center '>
-                                                        <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
-                                                        <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                                    <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                        <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 0.56 ETH</p>
+                                                        <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                             Place Bid
                                                         </div>
 
@@ -636,7 +628,7 @@ const NFT = () => {
                             <div className=' '>
                                 <p className='mb-[20px] text-[24px] font-bold leading-[32px] text-[#2B3674]'>Trending NFTs</p>
                                 <div className='w-full '>
-                                    <div className='grid grid-cols-3 gap-[20px]'>
+                                    <div className='grid md:grid-cols-3 grid-cols-1 gap-[20px]'>
                                         <div className='p-[17px] bg-white rounded-[20px]'>
                                             <div className='rounded-[18px] overflow-auto w-full trending-nft-img relative '>
                                                 <Image width={300} height={300} src='https://dummyimage.com/308x205/E9E3Ff/1d1d1f' className='rounded-[18px] overflow-auto w-full' alt="Image" unoptimized />
@@ -647,19 +639,19 @@ const NFT = () => {
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <div className='flex justify-between items-center'>
-                                                <div className='pt-[20px]'>
+                                            <div className='2xl:flex justify-between items-center'>
+                                                <div className='2xl:pt-[20px] pt-[10px]'>
                                                     <p className='text-[18px] font-bold leading-[30px]'>Swipe Circles</p>
-                                                    <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Peter Will</p>
+                                                    <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Peter Will</p>
                                                 </div>
                                                 <div className='flex items-center'>
                                                     <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
                                                     <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                 </div>
                                             </div>
-                                            <div className='pt-[25px] flex justify-between items-center '>
-                                                <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                            <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 2.30 ETH</p>
+                                                <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                     Place Bid
                                                 </div>
 
@@ -675,19 +667,19 @@ const NFT = () => {
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <div className='flex justify-between items-center'>
-                                                <div className='pt-[20px]'>
+                                            <div className='2xl:flex justify-between items-center'>
+                                                <div className='2xl:pt-[20px] pt-[10px]'>
                                                     <p className='text-[18px] font-bold leading-[30px]'>Colorful Heaven</p>
-                                                    <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Mark Benjamin</p>
+                                                    <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Mark Benjamin</p>
                                                 </div>
                                                 <div className='flex items-center'>
                                                     <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
                                                     <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                 </div>
                                             </div>
-                                            <div className='pt-[25px] flex justify-between items-center '>
-                                                <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 1.30 ETH</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                            <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 1.30 ETH</p>
+                                                <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                     Place Bid
                                                 </div>
 
@@ -703,10 +695,10 @@ const NFT = () => {
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <div className='flex justify-between items-center'>
-                                                <div className='pt-[20px]'>
+                                            <div className='2xl:flex justify-between items-center'>
+                                                <div className='2xl:pt-[20px] pt-[10px]'>
                                                     <p className='text-[18px] font-bold leading-[30px]'>3D Cubes Art</p>
-                                                    <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0]'>By Manny Gates</p>
+                                                    <p className='text-[14px] font-normal leading-[20px] text-[#A3AED0] 2xl:mb-0 mb-[8px]'>By Manny Gates</p>
                                                 </div>
                                                 <div className='flex items-center'>
                                                     <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full'></div>
@@ -715,9 +707,9 @@ const NFT = () => {
                                                     <div className='w-[28px] h-[28px] border-[2px] border-white bg-[#E0E5F2] rounded-full ms-[-12px] font-bold text-[9px] flex items-center justify-center'>18+</div>
                                                 </div>
                                             </div>
-                                            <div className='pt-[25px] flex justify-between items-center '>
-                                                <p className='text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 6.58 ETH</p>
-                                                <div className='rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
+                                            <div className='pt-[25px] 2xl:flex justify-between items-center 2xl:mt-0'>
+                                                <p className='mb-[8px] text-[#4318FF] text-[14px] font-bold leading-[24px]'>Current Bid: 6.58 ETH</p>
+                                                <div className='w-fit rounded-[70px] px-[24px] py[5px] bg-[#11047A] text-white font-[500] text-[14px] leading-[24px] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 '>
                                                     Place Bid
                                                 </div>
                                             </div>
@@ -727,8 +719,8 @@ const NFT = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='max-w-[484px]'>
-                        <div className='w-[484px] h-[calc(100vh_-_150px)]'>
+                    <div className=''>
+                        <div className=''>
                             <div className='h-full'>
                                 <div className='h-[50%] overflow-auto'>
                                     <div className='rounded-[20px] overflow-auto h-full'>
@@ -774,9 +766,9 @@ const NFT = () => {
                                                                     <path d="M4.46604 11.2312L0 8.5125L4.46543 15L8.93511 8.5125L4.46422 11.2312H4.46604ZM4.53396 0L0.0667117 7.63937L4.53336 10.3606L9 7.64188L4.53396 0Z" fill="#2B3674" />
                                                                 </svg>
                                                             </div>
-                                                            <p className='text-[16px] font-bold leading-[20px]'>1.30 ETH</p>
+                                                            <p className='2xl:text-[16px] text-[14px] font-bold leading-[20px]'>1.30 ETH</p>
                                                         </div>
-                                                        <p className='text-[16px] font-normal leading-[20px] text-[#A3AED0]'>30s ago</p>
+                                                        <p className='2xl:text-[16px] text-[12px] font-normal leading-[20px] text-[#A3AED0]'>30s ago</p>
                                                     </div>
                                                 </div>
                                                 <div className='rounded-[16px] px-[16px] py-[12px] history-box'>
@@ -794,9 +786,9 @@ const NFT = () => {
                                                                     <path d="M4.46604 11.2312L0 8.5125L4.46543 15L8.93511 8.5125L4.46422 11.2312H4.46604ZM4.53396 0L0.0667117 7.63937L4.53336 10.3606L9 7.64188L4.53396 0Z" fill="#2B3674" />
                                                                 </svg>
                                                             </div>
-                                                            <p className='text-[16px] font-bold leading-[20px]'>0.91 ETH</p>
+                                                            <p className='2xl:text-[16px] text-[14px] font-bold leading-[20px]'>0.91 ETH</p>
                                                         </div>
-                                                        <p className='text-[16px] font-normal leading-[20px] text-[#A3AED0]'>58s ago</p>
+                                                        <p className='2xl:text-[16px] text-[12px] font-normal leading-[20px] text-[#A3AED0]'>58s ago</p>
                                                     </div>
                                                 </div>
                                                 <div className='rounded-[16px] px-[16px] py-[12px] history-box'>
@@ -814,9 +806,9 @@ const NFT = () => {
                                                                     <path d="M4.46604 11.2312L0 8.5125L4.46543 15L8.93511 8.5125L4.46422 11.2312H4.46604ZM4.53396 0L0.0667117 7.63937L4.53336 10.3606L9 7.64188L4.53396 0Z" fill="#2B3674" />
                                                                 </svg>
                                                             </div>
-                                                            <p className='text-[16px] font-bold leading-[20px]'>2.82 ETH</p>
+                                                            <p className='2xl:text-[16px] text-[14px] font-bold leading-[20px]'>2.82 ETH</p>
                                                         </div>
-                                                        <p className='text-[16px] font-normal leading-[20px] text-[#A3AED0]'>1m ago</p>
+                                                        <p className='2xl:text-[16px] text-[12px] font-normal leading-[20px] text-[#A3AED0]'>1m ago</p>
                                                     </div>
                                                 </div>
                                                 <div className='rounded-[16px] px-[16px] py-[12px] history-box'>
@@ -834,9 +826,9 @@ const NFT = () => {
                                                                     <path d="M4.46604 11.2312L0 8.5125L4.46543 15L8.93511 8.5125L4.46422 11.2312H4.46604ZM4.53396 0L0.0667117 7.63937L4.53336 10.3606L9 7.64188L4.53396 0Z" fill="#2B3674" />
                                                                 </svg>
                                                             </div>
-                                                            <p className='text-[16px] font-bold leading-[20px]'>0.56 ETH</p>
+                                                            <p className='2xl:text-[16px] text-[14px] font-bold leading-[20px]'>0.56 ETH</p>
                                                         </div>
-                                                        <p className='text-[16px] font-normal leading-[20px] text-[#A3AED0]'>2m ago</p>
+                                                        <p className='2xl:text-[16px] text-[12px] font-normal leading-[20px] text-[#A3AED0]'>2m ago</p>
                                                     </div>
                                                 </div>
                                                 <div className='rounded-[16px] px-[16px] py-[12px] history-box'>
@@ -854,9 +846,9 @@ const NFT = () => {
                                                                     <path d="M4.46604 11.2312L0 8.5125L4.46543 15L8.93511 8.5125L4.46422 11.2312H4.46604ZM4.53396 0L0.0667117 7.63937L4.53336 10.3606L9 7.64188L4.53396 0Z" fill="#2B3674" />
                                                                 </svg>
                                                             </div>
-                                                            <p className='text-[16px] font-bold leading-[20px]'>6.58 ETH</p>
+                                                            <p className='2xl:text-[16px] text-[14px] font-bold leading-[20px]'>6.58 ETH</p>
                                                         </div>
-                                                        <p className='text-[16px] font-normal leading-[20px] text-[#A3AED0]'>3m ago</p>
+                                                        <p className='2xl:text-[16px] text-[12px] font-normal leading-[20px] text-[#A3AED0]'>3m ago</p>
                                                     </div>
                                                 </div>
                                             </div>

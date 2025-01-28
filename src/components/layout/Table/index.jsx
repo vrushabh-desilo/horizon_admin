@@ -8,6 +8,7 @@ import { Column } from 'primereact/column';
 import { Slider } from 'primereact/slider';
 import { Checkbox } from 'primereact/checkbox';
 import { Menu } from 'primereact/menu';
+import Mobile_Menu from '../Mobile_Menu';
 
 const development_data = [
     {
@@ -277,7 +278,7 @@ const Table = () => {
     return (
         <div>
             <div className="">
-                <div className=" flex justify-between items-center sticky top-0 bg-[#F4F7FE]">
+                <div className=" flex justify-between items-center sticky top-0 pt-[40px] bg-[#F4F7FE] pb-[30px] z-[99]">
                     <div className="">
                         <div className="flex items-center text-[#707EAE] gap-[5px]">
                             <p>Pages</p>
@@ -288,8 +289,8 @@ const Table = () => {
                             Tables
                         </h1>
                     </div>
-                    <div className="bg-white p-[10px] rounded-[30px] flex items-center gap-[20px]">
-                        <div className="flex items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
+                    <div className="bg-white p-[10px] rounded-[30px] flex items-center 2md:gap-[20px] gap-[16px]">
+                        <div className="2sm:flex hidden items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
                             <div>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -324,7 +325,7 @@ const Table = () => {
                             />
                         </div>
                         {/* notifaction */}
-                        <div className='cursor-pointer'>
+                        <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -344,9 +345,10 @@ const Table = () => {
                                     </clipPath>
                                 </defs>
                             </svg>
+                            <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                         </div>
                         {/* night mode */}
-                        <div className='cursor-pointer'>
+                        <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="18"
@@ -368,7 +370,7 @@ const Table = () => {
                             </svg>
                         </div>
                         {/*  */}
-                        <div className='cursor-pointer'>
+                        <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -390,7 +392,7 @@ const Table = () => {
                             </svg>
                         </div>
                         {/* user-profile */}
-                        <div className="max-w-[50px] rounded-full overflow-auto">
+                        <div className="2md:w-[50px] w-[40px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                             <Image
                                 width={300}
                                 height={300}
@@ -400,12 +402,15 @@ const Table = () => {
                                 unoptimized
                             />
                         </div>
+                        <div className='2lg:hidden block'>
+                            <Mobile_Menu />
+                        </div>
                     </div>
                 </div>
 
                 <div className=''>
-                    <div className='h-[calc(100vh_-_150px)] my-[20px] overflow-auto'>
-                        <div className='grid grid-cols-2 gap-[20px]'>
+                    <div className=' my-[20px]'>
+                        <div className='grid md:grid-cols-2 grid-cols-1 gap-[20px]'>
                             <div className=" bg-white rounded-[20px] overflow-auto">
                                 <div className='flex justify-between items-center px-[25px] pt-[25px]'>
                                     <p className='text-[24px] leading-[normal] font-bold'>Development Table</p>

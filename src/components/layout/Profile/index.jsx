@@ -5,6 +5,7 @@ import userProfile from '../../../assets/images/Elipse 5.png';
 import { Menu } from 'primereact/menu';
 import { Slider } from "primereact/slider";
 import { InputSwitch } from "primereact/inputswitch";
+import Mobile_Menu from '../Mobile_Menu';
 
 
 
@@ -53,7 +54,7 @@ const Profile = () => {
         <div>
             <div>
                 <div className="">
-                    <div className=" flex justify-between items-center sticky top-0 bg-[#F4F7FE]">
+                    <div className=" flex justify-between items-center sticky top-0 pt-[40px] bg-[#F4F7FE] pb-[30px] z-[99]">
                         <div className="">
                             <div className="flex items-center text-[#707EAE] gap-[5px]">
                                 <p>Pages</p>
@@ -64,8 +65,8 @@ const Profile = () => {
                                 Profile
                             </h1>
                         </div>
-                        <div className="bg-white p-[10px] rounded-[30px] flex items-center gap-[20px]">
-                            <div className="flex items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
+                        <div className="bg-white p-[10px] rounded-[30px] flex items-center 2md:gap-[20px] gap-[16px]">
+                            <div className="2sm:flex hidden items-center gap-[10px] rounded-[49px]  px-[20px] py-[10px] bg-[#F4F7FE]">
                                 <div>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +101,7 @@ const Profile = () => {
                                 />
                             </div>
                             {/* notifaction */}
-                            <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                            <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -123,7 +124,7 @@ const Profile = () => {
                                 <Menu model={items} popup ref={menuLeft} id="popup_menu_left" />
                             </div>
                             {/* night mode */}
-                            <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                            <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="18"
@@ -145,7 +146,7 @@ const Profile = () => {
                                 </svg>
                             </div>
                             {/*  */}
-                            <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
+                            <div className='cursor-pointer 2sm:flex hidden' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -167,7 +168,7 @@ const Profile = () => {
                                 </svg>
                             </div>
                             {/* user-profile */}
-                            <div className="max-w-[50px] rounded-full overflow-auto">
+                            <div className="2md:w-[50px] w-[40px] rounded-full overflow-auto cursor-pointer" label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                 <Image
                                     width={300}
                                     height={300}
@@ -177,11 +178,14 @@ const Profile = () => {
                                     unoptimized
                                 />
                             </div>
+                            <div className='2lg:hidden block'>
+                                <Mobile_Menu />
+                            </div>
                         </div>
                     </div>
 
                     <div className=''>
-                        <div className='h-[calc(100vh_-_150px)] my-[20px] overflow-auto'>
+                        <div className='my-[20px]'>
                             <div>
                                 <div className='flex flex-row gap-[20px]'>
                                     <div className='w-[552px] rounded-[20px] bg-white p-[17px]'>

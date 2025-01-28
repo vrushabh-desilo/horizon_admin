@@ -31,7 +31,7 @@ const Kanban = () => {
         <div>
             <div>
                 <div className="">
-                    <div className=" flex justify-between items-center sticky top-0 bg-[#F4F7FE]">
+                    <div className=" flex justify-between items-center sticky top-0 pt-[40px] bg-[#F4F7FE]">
                         <div className="">
                             <div className="flex items-center text-[#707EAE] gap-[5px]">
                                 <p>Pages</p>
