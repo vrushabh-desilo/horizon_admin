@@ -115,7 +115,7 @@ const KanbanBoard = () => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-[24px]">
+        <div className="flex grid-cols-3 gap-[24px] overflow-auto kanban-column">
             {columns.map((col) => (
                 <Column
                     key={col.id}

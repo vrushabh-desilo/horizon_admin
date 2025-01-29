@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 
 const AppLayout = () => {
@@ -13,17 +14,19 @@ const AppLayout = () => {
         <div className="2sm:flex h-screen bg-[#F4F7FE] overflow-auto w-screen">
             {/* Sidebar - Only show if not on signin route */}
             {!isSigninRoute && <Sidebar />}
-            <div className={isSigninRoute ? "w-full h-full" : "2lg:w-[calc(100vw_-_300px)] w-full h-[calc(100vh_-_20px)] overflow-auto px-[20px] pb-[20px]"}>
-                {/* Header */}
-                {/* <Header /> */}
-                {/* Main Content */}
-                <div className='bg-[#F4F7FE] h-full'>
-                    <div className={`${!isSigninRoute ? "" : ""} h-full`}>
-                        <Outlet />
+            <div className='flex-1'>
+                <div className={isSigninRoute ? "w-full h-full" : "2lg:w-[calc(100vw_-_300px)] w-full lg:h-[calc(100vh_-_64px)] h-[calc(100vh_-_80px)] overflow-auto px-[20px] pb-[20px]"}>
+                    {/* Header */}
+                    {/* <Header /> */}
+                    {/* Main Content */}
+                    <div className='bg-[#F4F7FE] h-full'>
+                        <div className={`${!isSigninRoute ? "" : ""} h-full`}>
+                            <Outlet />
+                        </div>
                     </div>
+                    {/* Footer */}
                 </div>
-                {/* Footer */}
-                {/* <Footer /> */}
+                {!isSigninRoute && <Footer />}
             </div>
         </div>
     );

@@ -34,7 +34,7 @@ const Column = ({ id, name, items, image, onDrop }) => {
     return (
         <div
             ref={drop}
-            className={`p-[25px] rounded-[15px] ${isOver ? "bg-blue-100" : "bg-white"
+            className={`p-[25px] rounded-[15px] min-w-[450px] w-full overflow-auto ${isOver ? "bg-blue-100" : "bg-white"
                 }`}
         >
             <div className="flex justify-between items-center">

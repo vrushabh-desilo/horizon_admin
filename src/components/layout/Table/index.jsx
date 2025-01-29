@@ -402,7 +402,7 @@ const Table = () => {
                                 unoptimized
                             />
                         </div>
-                        <div className='2lg:hidden block'>
+                        <div className='2lg:hidden block cursor-pointer'>
                             <Mobile_Menu />
                         </div>
                     </div>
@@ -430,11 +430,12 @@ const Table = () => {
                                 </div>
                                 <div className='custome-table tables-table pt-[8px]'>
                                     <DataTable value={development_data} >
-                                        <Column field="name" header="Name" sortable className='font-bold leading-[24px]' ></Column>
+                                        <Column field="name" header="Name" sortable className='font-bold leading-[24px] whitespace-nowrap' ></Column>
                                         <Column
                                             field="os"
                                             header="OS"
                                             sortable
+                                            className='whitespace-nowrap'
                                             body={(rowData) => (
                                                 <div className="flex gap-[16px]">
                                                     {rowData.os.map((osItem, index) => (
@@ -445,8 +446,9 @@ const Table = () => {
                                                     ))}
                                                 </div>
                                             )}
-                                        ></Column>
-                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px]'></Column>
+                                        >
+                                        </Column>
+                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px] whitespace-nowrap'></Column>
                                         <Column
                                             field="process"
                                             header="Process"
@@ -468,7 +470,7 @@ const Table = () => {
 
                                                 );
                                             }}
-                                            className="font-bold leading-[24px]"
+                                            className="font-bold leading-[24px] whitespace-nowrap min-w-[200px]"
                                         ></Column>
                                     </DataTable>
                                 </div>
@@ -495,11 +497,8 @@ const Table = () => {
                                             field="name"
                                             header="Name"
                                             sortable
-                                            className="font-bold leading-[24px]"
+                                            className="font-bold leading-[24px] whitespace-nowrap"
                                             body={(rowData) => {
-                                                // console.log('rowData', rowData)
-
-
                                                 return (
                                                     <div className="flex items-center gap-2">
                                                         <Checkbox
@@ -515,9 +514,9 @@ const Table = () => {
                                                 );
                                             }}
                                         ></Column>
-                                        <Column field="process" header="Process" sortable className="font-bold leading-[24px]"></Column>
-                                        <Column field="value" header="Value" sortable className="font-bold leading-[24px]"></Column>
-                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px]'></Column>
+                                        <Column field="process" header="Process" sortable className="font-bold leading-[24px] whitespace-nowrap"></Column>
+                                        <Column field="value" header="Value" sortable className="font-bold leading-[24px] whitespace-nowrap"></Column>
+                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px] whitespace-nowrap'></Column>
                                     </DataTable>
                                 </div>
                             </div>
@@ -539,10 +538,10 @@ const Table = () => {
                                 </div>
                                 <div className='custome-table tables-table pt-[8px]'>
                                     <DataTable value={taskData} >
-                                        <Column field="name" header="Name" sortable className="font-bold leading-[24px]"></Column>
-                                        <Column field="process" header="Process" sortable className="font-bold leading-[24px]"></Column>
-                                        <Column field="value" header="Value" sortable className="font-bold leading-[24px]"></Column>
-                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px]'></Column>
+                                        <Column field="name" header="Name" sortable className="font-bold leading-[24px] whitespace-nowrap"></Column>
+                                        <Column field="process" header="Process" sortable className="font-bold leading-[24px] whitespace-nowrap"></Column>
+                                        <Column field="value" header="Value" sortable className="font-bold leading-[24px] whitespace-nowrap"></Column>
+                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px] whitespace-nowrap'></Column>
                                     </DataTable>
                                 </div>
                             </div>
@@ -564,12 +563,12 @@ const Table = () => {
                                 </div>
                                 <div className='custome-table tables-table pt-[8px]'>
                                     <DataTable value={development_data} >
-                                        <Column field="name" header="Name" sortable className='font-bold leading-[24px]' ></Column>
+                                        <Column field="name" header="Name" sortable className='font-bold leading-[24px] whitespace-nowrap' ></Column>
                                         <Column
                                             field="status"
                                             header="Status"
                                             sortable
-                                            className="font-bold leading-[24px]"
+                                            className="font-bold leading-[24px] whitespace-nowrap"
                                             body={(rowData) => {
                                                 const renderStatusIcon = (status) => {
                                                     switch (status) {
@@ -628,7 +627,7 @@ const Table = () => {
                                                 return <div className="flex gap-[16px]">{renderStatusIcon(rowData.status)}</div>;
                                             }}
                                         ></Column>
-                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px]'></Column>
+                                        <Column field="date" header="Date" sortable className='font-bold leading-[24px] whitespace-nowrap'></Column>
                                         <Column
                                             field="process"
                                             header="Process"
@@ -650,7 +649,7 @@ const Table = () => {
 
                                                 );
                                             }}
-                                            className="font-bold leading-[24px]"
+                                            className="font-bold leading-[24px] whitespace-nowrap min-w-[200px]"
                                         ></Column>
                                     </DataTable>
                                 </div>

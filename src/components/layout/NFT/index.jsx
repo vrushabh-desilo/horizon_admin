@@ -218,7 +218,7 @@ const NFT = () => {
                             unoptimized
                         />
                     </div>
-                    <div className='2lg:hidden block'>
+                    <div className='2lg:hidden block cursor-pointer'>
                         <Mobile_Menu />
                     </div>
                 </div>
@@ -624,7 +624,7 @@ const NFT = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='py-[20px]'>
+                        <div className='pt-[20px]'>
                             <div className=' '>
                                 <p className='mb-[20px] text-[24px] font-bold leading-[32px] text-[#2B3674]'>Trending NFTs</p>
                                 <div className='w-full '>

@@ -3,15 +3,15 @@ import { Sidebar } from 'primereact/sidebar'
 import React, { useState } from 'react'
 import { Image } from 'primereact/image';
 import logo from '../../../assets/images/logo.png'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Mobile_Menu = () => {
     const [visible, setVisible] = useState(false);
     const customHeader = (
         <div className='logo p-[10px] border-b border-[#F4F7FE]'>
-            <div>
+            <Link to='/'>
                 <Image width={300} height={300} src={logo} alt="Image" unoptimized />
-            </div>
+            </Link>
         </div>
     );
 

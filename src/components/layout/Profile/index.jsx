@@ -178,7 +178,7 @@ const Profile = () => {
                                     unoptimized
                                 />
                             </div>
-                            <div className='2lg:hidden block'>
+                            <div className='2lg:hidden block cursor-pointer'>
                                 <Mobile_Menu />
                             </div>
                         </div>
@@ -187,13 +187,13 @@ const Profile = () => {
                     <div className=''>
                         <div className='my-[20px]'>
                             <div>
-                                <div className='flex flex-row gap-[20px]'>
-                                    <div className='w-[552px] rounded-[20px] bg-white p-[17px]'>
+                                <div className='grid 2md:grid-cols-12 flex-row gap-[20px]'>
+                                    <div className='2md:col-span-4 rounded-[20px] bg-white p-[17px]'>
                                         <div className='pb-[20px] relative'>
                                             <div className='rounded-[16px] overflow-auto'>
                                                 <div className=' '>
                                                     <Image
-                                                        className=""
+                                                        className="w-full image-100"
                                                         src='https://dummyimage.com/600x131/d9e4fc/fff'
                                                         alt="Image" unoptimized
                                                     />
@@ -227,9 +227,9 @@ const Profile = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='w-[381px] rounded-[20px] bg-white p-[17px]'>
+                                    <div className='2md:col-span-3 rounded-[20px] bg-white p-[17px]'>
                                         <div className='flex justify-end'>
-                                            <div className='rounded-[10px] bg-[#F4F7FE] p-[7px] cursor-pointer'>
+                                            <div className='rounded-[10px] bg-[#F4F7FE] p-[7px] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                     <g clip-path="url(#clip0_101_9124)">
                                                         <path d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z" fill="#4318FF" />
@@ -269,11 +269,11 @@ const Profile = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='w-[617px] rounded-[20px] bg-white p-[27px]'>
-                                        <div className='flex gap-[36px] items-center h-full'>
-                                            <div className='rounded-[13px] bg-[#FAFCFE] border border-dashed border-[#E0E5F2] h-full px-[26px]'>
+                                    <div className='2md:col-span-5 rounded-[20px] bg-white 2md:p-[27px] p-[16px]'>
+                                        <div className='2md:grid 3lg:grid-cols-2  3xl:gap-[36px] gap-[16px] items-center justify-start 3lg:h-full'>
+                                            <div className='rounded-[13px] bg-[#FAFCFE] border border-dashed border-[#E0E5F2] h-full 3xl:px-[26px] px-[16px]'>
                                                 <label for="myfile" className='h-full'>
-                                                    <div className='flex flex-col gap-[12px] items-center justify-center h-full'>
+                                                    <div className='flex flex-col gap-[12px] items-center justify-center h-full py-2'>
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
                                                                 <g clip-path="url(#clip0_101_9133)">
@@ -287,102 +287,102 @@ const Profile = () => {
                                                             </svg>
                                                         </div>
                                                         <p className='text-[20px] leading-[32px] font-bold text-[#4318FF]'>Upload Files</p>
-                                                        <p className='text-[12px] leading-[20px] font-medium text-[#8F9BBA]'>PNG, JPG and GIF files are allowed</p>
+                                                        <p className='text-[12px] leading-[20px] font-medium text-[#8F9BBA] 3xl:text-left text-center'>PNG, JPG and GIF files are allowed</p>
                                                     </div>
                                                 </label>
                                                 <input type="file" id="myfile" name="myfile" className='hidden' />
                                             </div>
-                                            <div className='w-[250px] text-center'>
+                                            <div className=''>
                                                 <div>
-                                                    <p className='text-[#2B3674] font-medium text-[24px] leading-[32px]'>Complete your profile</p>
-                                                    <p className='text-[#A3AED0] font-normal text-[16px] leading-[26px]'>Stay on the pulse of distributed projects with an anline whiteboard to plan, coordinate and discuss</p>
+                                                    <p className='text-[#2B3674] font-medium text-[24px] leading-[32px] 2md:pt-0 pt-[16px]'>Complete your profile</p>
+                                                    <p className='text-[#A3AED0] font-normal text-[16px] 3lg:leading-[24px] leading-[20px] 3xl:mt-0 mt-[8px]'>Stay on the pulse of distributed projects with an anline whiteboard to plan, coordinate and discuss</p>
                                                 </div>
-                                                <div className='text-[14px] leading-[24px] font-normal w-fit text-white rounded-[16px] px-[25px] py-[8px] bg-[#4318FF] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 mt-[74px]'>
+                                                <div className='text-[14px] leading-[24px] font-normal 3lg:w-fit w-full text-center text-white rounded-[16px] px-[25px] py-[8px] bg-[#4318FF] cursor-pointer hover:bg-[#868CFF] transition-all duration-300 3lg:mt-[74px] mt-[16px]'>
                                                     Publish now
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex flex-row gap-[20px] pt-[20px]'>
-                                    <div className="w-[512px] p-[31px] !pt-[23px] bg-white rounded-[20px] date-section">
+                                <div className='grid 2md:grid-cols-12 gap-[20px] pt-[20px]'>
+                                    <div className="xl:col-span-4 2md:col-span-6 2md:p-[31px] p-[16px] 2md:!pt-[23px] bg-white rounded-[20px] date-section">
                                         <div className=''>
                                             <p className='text-[18px] leading-[32px] font-bold'>All Projects</p>
                                             <p className='text-[16px] leading-[26px] font-normal text-[#A3AED0] pt-[15px]'>Here you can find more details about your projects. Keep you user engaged by providing meaningful information.</p>
                                         </div>
                                         <div className='pt-[20px] flex flex-col gap-[16px]'>
                                             <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] px-[16px] py-[14px]'>
-                                                <div className='flex justify-between items-center'>
-                                                    <div className='flex items-center gap-[12px] justify-between'>
-                                                        <Image src='https://dummyimage.com/80x80/E0E5F2/040405' alt='avatar' className='w-[80px] h-[80px] rounded-[8px] overflow-auto' />
-                                                        <div>
+                                                <div className='flex items-center justify-between'>
+                                                    <div className='flex items-center'>
+                                                        <Image src='https://dummyimage.com/80x80/E0E5F2/040405' width='80' height='80' alt='avatar' className='w-[80px] h-[80px] rounded-[8px] overflow-auto flex' />
+                                                        <div className='ml-[16px]'>
                                                             <div className='text-[16px] leading-[28px] font-bold '>Technology behind the Blockchain</div>
                                                             <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Project #1 • <span><a href="#" className='text-[#4318FF] text-[14px] font-medium leading-[20px]'>See project details</a></span></div>
                                                         </div>
-                                                        <div className='cursor-pointer'>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                                <g clip-path="url(#clip0_101_9154)">
-                                                                    <path d="M2.25 13.095V15.375C2.25 15.585 2.415 15.75 2.625 15.75H4.905C5.0025 15.75 5.1 15.7125 5.1675 15.6375L13.3575 7.455L10.545 4.6425L2.3625 12.825C2.2875 12.9 2.25 12.99 2.25 13.095ZM15.5325 5.28C15.825 4.9875 15.825 4.515 15.5325 4.2225L13.7775 2.4675C13.485 2.175 13.0125 2.175 12.72 2.4675L11.3475 3.84L14.16 6.6525L15.5325 5.28Z" fill="#8F9BBA" />
-                                                                </g>
-                                                                <defs>
-                                                                    <clipPath id="clip0_101_9154">
-                                                                        <rect width="18" height="18" fill="white" />
-                                                                    </clipPath>
-                                                                </defs>
-                                                            </svg>
-                                                        </div>
+                                                    </div>
+                                                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <g clip-path="url(#clip0_101_9154)">
+                                                                <path d="M2.25 13.095V15.375C2.25 15.585 2.415 15.75 2.625 15.75H4.905C5.0025 15.75 5.1 15.7125 5.1675 15.6375L13.3575 7.455L10.545 4.6425L2.3625 12.825C2.2875 12.9 2.25 12.99 2.25 13.095ZM15.5325 5.28C15.825 4.9875 15.825 4.515 15.5325 4.2225L13.7775 2.4675C13.485 2.175 13.0125 2.175 12.72 2.4675L11.3475 3.84L14.16 6.6525L15.5325 5.28Z" fill="#8F9BBA" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_101_9154">
+                                                                    <rect width="18" height="18" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] px-[16px] py-[14px]'>
-                                                <div className='flex justify-between items-center'>
-                                                    <div className='flex items-center gap-[12px] justify-between'>
-                                                        <Image src='https://dummyimage.com/80x80/E0E5F2/040405' alt='avatar' className='w-[80px] h-[80px] rounded-[8px] overflow-auto' />
-                                                        <div>
+                                                <div className='flex items-center justify-between'>
+                                                    <div className='flex items-center'>
+                                                        <Image src='https://dummyimage.com/80x80/E0E5F2/040405' width='80' height='80' alt='avatar' className='w-[80px] h-[80px] rounded-[8px] overflow-auto flex' />
+                                                        <div className='ml-[16px]'>
                                                             <div className='text-[16px] leading-[28px] font-bold '>Greatest way to a good Economy</div>
                                                             <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Project #2 • <span><a href="#" className='text-[#4318FF] text-[14px] font-medium leading-[20px]'>See project details</a></span></div>
                                                         </div>
-                                                        <div className='cursor-pointer'>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                                <g clip-path="url(#clip0_101_9154)">
-                                                                    <path d="M2.25 13.095V15.375C2.25 15.585 2.415 15.75 2.625 15.75H4.905C5.0025 15.75 5.1 15.7125 5.1675 15.6375L13.3575 7.455L10.545 4.6425L2.3625 12.825C2.2875 12.9 2.25 12.99 2.25 13.095ZM15.5325 5.28C15.825 4.9875 15.825 4.515 15.5325 4.2225L13.7775 2.4675C13.485 2.175 13.0125 2.175 12.72 2.4675L11.3475 3.84L14.16 6.6525L15.5325 5.28Z" fill="#8F9BBA" />
-                                                                </g>
-                                                                <defs>
-                                                                    <clipPath id="clip0_101_9154">
-                                                                        <rect width="18" height="18" fill="white" />
-                                                                    </clipPath>
-                                                                </defs>
-                                                            </svg>
-                                                        </div>
+                                                    </div>
+                                                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <g clip-path="url(#clip0_101_9154)">
+                                                                <path d="M2.25 13.095V15.375C2.25 15.585 2.415 15.75 2.625 15.75H4.905C5.0025 15.75 5.1 15.7125 5.1675 15.6375L13.3575 7.455L10.545 4.6425L2.3625 12.825C2.2875 12.9 2.25 12.99 2.25 13.095ZM15.5325 5.28C15.825 4.9875 15.825 4.515 15.5325 4.2225L13.7775 2.4675C13.485 2.175 13.0125 2.175 12.72 2.4675L11.3475 3.84L14.16 6.6525L15.5325 5.28Z" fill="#8F9BBA" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_101_9154">
+                                                                    <rect width="18" height="18" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] px-[16px] py-[14px]'>
-                                                <div className='flex justify-between items-center'>
-                                                    <div className='flex items-center gap-[12px] justify-between'>
-                                                        <Image src='https://dummyimage.com/80x80/E0E5F2/040405' alt='avatar' className='w-[80px] h-[80px] rounded-[8px] overflow-auto' />
-                                                        <div>
+                                                <div className='flex items-center justify-between'>
+                                                    <div className='flex items-center'>
+                                                        <Image src='https://dummyimage.com/80x80/E0E5F2/040405' width='80' height='80' alt='avatar' className='w-[80px] h-[80px] rounded-[8px] overflow-auto flex' />
+                                                        <div className='ml-[16px]'>
                                                             <div className='text-[16px] leading-[28px] font-bold '>Most essential tips for Burnout</div>
                                                             <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Project #3 • <span><a href="#" className='text-[#4318FF] text-[14px] font-medium leading-[20px]'>See project details</a></span></div>
                                                         </div>
-                                                        <div className='cursor-pointer'>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                                <g clip-path="url(#clip0_101_9154)">
-                                                                    <path d="M2.25 13.095V15.375C2.25 15.585 2.415 15.75 2.625 15.75H4.905C5.0025 15.75 5.1 15.7125 5.1675 15.6375L13.3575 7.455L10.545 4.6425L2.3625 12.825C2.2875 12.9 2.25 12.99 2.25 13.095ZM15.5325 5.28C15.825 4.9875 15.825 4.515 15.5325 4.2225L13.7775 2.4675C13.485 2.175 13.0125 2.175 12.72 2.4675L11.3475 3.84L14.16 6.6525L15.5325 5.28Z" fill="#8F9BBA" />
-                                                                </g>
-                                                                <defs>
-                                                                    <clipPath id="clip0_101_9154">
-                                                                        <rect width="18" height="18" fill="white" />
-                                                                    </clipPath>
-                                                                </defs>
-                                                            </svg>
-                                                        </div>
+                                                    </div>
+                                                    <div className='cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup >
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <g clip-path="url(#clip0_101_9154)">
+                                                                <path d="M2.25 13.095V15.375C2.25 15.585 2.415 15.75 2.625 15.75H4.905C5.0025 15.75 5.1 15.7125 5.1675 15.6375L13.3575 7.455L10.545 4.6425L2.3625 12.825C2.2875 12.9 2.25 12.99 2.25 13.095ZM15.5325 5.28C15.825 4.9875 15.825 4.515 15.5325 4.2225L13.7775 2.4675C13.485 2.175 13.0125 2.175 12.72 2.4675L11.3475 3.84L14.16 6.6525L15.5325 5.28Z" fill="#8F9BBA" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_101_9154">
+                                                                    <rect width="18" height="18" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="w-[617px] p-[31px] !pt-[23px] bg-white rounded-[20px] date-section">
+                                    <div className="xl:col-span-5 2md:col-span-6 2md:p-[31px] p-[16px] 2md:!pt-[23px] bg-white rounded-[20px] date-section">
                                         <div className=''>
                                             <p className='text-[18px] leading-[32px] font-bold'>General Information</p>
                                             <p className='text-[16px] leading-[26px] font-normal text-[#A3AED0] pt-[15px]'>As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...</p>
@@ -392,33 +392,33 @@ const Profile = () => {
                                                 <div className='grid grid-cols-2 gap-[18px]'>
                                                     <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] p-[23px]'>
                                                         <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Education</div>
-                                                        <div className='text-[16px] leading-[16px] font-normal pt-[3px]'>Stanford University</div>
+                                                        <div className='text-[16px] leading-[20px] font-normal pt-[3px]'>Stanford University</div>
                                                     </div>
                                                     <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] p-[23px]'>
                                                         <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Education</div>
-                                                        <div className='text-[16px] leading-[16px] font-normal pt-[3px]'>English, Spanish, Italian</div>
+                                                        <div className='text-[16px] leading-[20px] font-normal pt-[3px]'>English, Spanish, Italian</div>
                                                     </div>
                                                     <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] p-[23px]'>
                                                         <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Department</div>
-                                                        <div className='text-[16px] leading-[16px] font-normal pt-[3px]'>Product Design</div>
+                                                        <div className='text-[16px] leading-[20px] font-normal pt-[3px]'>Product Design</div>
                                                     </div>
                                                     <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] p-[23px]'>
                                                         <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Work History</div>
-                                                        <div className='text-[16px] leading-[16px] font-normal pt-[3px]'>Google, Facebook</div>
+                                                        <div className='text-[16px] leading-[20px] font-normal pt-[3px]'>Google, Facebook</div>
                                                     </div>
                                                     <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] p-[23px]'>
                                                         <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Organization</div>
-                                                        <div className='text-[16px] leading-[16px] font-normal pt-[3px]'>Simmmple Web LLC</div>
+                                                        <div className='text-[16px] leading-[20px] font-normal pt-[3px]'>Simmmple Web LLC</div>
                                                     </div>
                                                     <div className='rounded-[16px] shadow-[0px_18px_40px_0px_rgba(112,144,176,0.12)] p-[23px]'>
                                                         <div className='text-[14px] leading-[20px] font-medium text-[#A3AED0]'>Birthday</div>
-                                                        <div className='text-[16px] leading-[16px] font-normal pt-[3px]'>20 July 1986</div>
+                                                        <div className='text-[16px] leading-[20px] font-normal pt-[3px]'>20 July 1986</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='w-[421px] p-[31px] !pt-[23px] bg-white rounded-[20px]'>
+                                    <div className='xl:col-span-3 2md:col-span-12 2md:p-[31px] p-[16px] 2md:!pt-[23px] bg-white rounded-[20px]'>
                                         <div className='flex justify-between items-center'>
                                             <p className='text-[18px] leading-[32px] font-bold'>Notifications</p>
                                             <div className='p-[6px] rounded-[10px] bg-[#F4F7FE] cursor-pointer' label="Show Left" icon="pi pi-align-left" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup>

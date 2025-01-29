@@ -315,7 +315,7 @@ const Dashboard = ({ name }) => {
                             unoptimized
                         />
                     </div>
-                    <div className='2lg:hidden block'>
+                    <div className='2lg:hidden block cursor-pointer'>
                         <Mobile_Menu />
                     </div>
                 </div>
@@ -432,7 +432,7 @@ const Dashboard = ({ name }) => {
                                     options={cities}
                                     optionLabel="name"
                                     placeholder=""
-                                    className="w-full md:w-14rem justify-end focus:shadow-none"
+                                    className="w-full md:w-14rem justify-end focus:shadow-none focus:outline-none focus:ring-0"
                                 />
                             </div>
                         </div>
@@ -1070,7 +1070,7 @@ const Dashboard = ({ name }) => {
                                     </defs>
                                 </svg>
                             </div>
-                            <Image src={starbucks_coffee} className='rounded-[20px]' alt="starbucks_coffee" />
+                            <img src={starbucks_coffee} className='rounded-[20px] w-full' alt="starbucks_coffee" />
                             <Image src={starbucks_logo} className='rounded-[20px] absolute bottom-[-25px] left-[14px] z-[2]' alt="starbucks_logo" />
                         </div>
                         <div className='pt-[40px]'>

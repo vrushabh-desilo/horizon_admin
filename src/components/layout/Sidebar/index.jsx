@@ -1,16 +1,16 @@
 import React from 'react'
 import { Image } from 'primereact/image';
 import logo from '../../../assets/images/logo.png'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
         <div className='2lg:block hidden'>
             <div className='w-[300px] bg-[#fff]  overflow-auto h-screen'>
                 <div className='logo p-[55px] border-b border-[#F4F7FE]'>
-                    <div>
+                    <Link to='/'>
                         <Image width={300} height={300} src={logo} alt="Image" unoptimized />
-                    </div>
+                    </Link>
                 </div>
                 <div className='h-[calc(100vh_-_132px)] overflow-auto ps-[33px] py-[40px] flex flex-col justify-between'>
                     <div className='flex flex-col gap-[26px] text-[16px] font-[500] leading-[30px] mb-[100px]'>
